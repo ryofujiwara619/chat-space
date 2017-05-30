@@ -6,7 +6,7 @@
 | Column     | Type        | Option             |
 |:-----------|------------:|:------------:      |
 | id         | integer     | null:false         |
-| body       | test        | null:false         |
+| body       | text        | null:false         |
 | image      | string      |                    |
 | user_id    | integer     | null:false         |
 | group_id   | integer     | null:false         |
