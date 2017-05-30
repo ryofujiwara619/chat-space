@@ -1,7 +1,8 @@
 
 # DB設計
 
-##messages table
+## messages table
+
 | Column     | Type        | Option             |
 |:-----------|------------:|:------------:      |
 | id         | integer     | null:false         |
@@ -11,6 +12,6 @@
 | group_id   | integer     | null:false         |
 | created_at | integer     | null:false         |
 
-##Association
+## Association
 belongs_to :user
 belongs_to :group
