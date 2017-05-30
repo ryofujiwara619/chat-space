@@ -12,6 +12,6 @@
 | group_id   | integer     | null:false         |
 | created_at | integer     | null:false         |
 
-## Association
+### Association
 belongs_to :user
 belongs_to :group
