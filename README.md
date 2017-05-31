@@ -19,13 +19,13 @@ belongs_to :group
 
 ## users table
 
-| Column     | Type          | Option                                           |
-|:-----------|:--------------|:------------------------------------------------:|
-| id         | integer       | primary_key                                      |
-| name       | string        | null:false, unique:true                          |
-| group_id   | reference     | index:true, null:false, foreign_key:true         |
-| email      | string        | implemented by devise Gem                        |
-| password   | string        | implemented by devise Gem                        |
+| Column     | Type          | Option                                                       |
+|:-----------|:--------------|:------------------------------------------------------------:|
+| id         | integer       | primary_key                                                  |
+| name       | string        | index:true, null:false, unique:true                          |
+| group_id   | reference     | index:true, null:false, foreign_key:true                     |
+| email      | string        | implemented by devise Gem                                    |
+| password   | string        | implemented by devise Gem                                    |
 
 
 ### Association
