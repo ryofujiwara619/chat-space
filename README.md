@@ -41,8 +41,17 @@ has_many :groups
 
 
 ### Association
-has_many :users
-has_many :messages　　
+has_many :users  
+has_many :messages
+
+
+## group_users table
+
+| Column     | Type          | Option                                           |
+|:-----------|:--------------|:------------------------------------------------:|
+| id         | integer       | primary_key                                      |
+| group_id   | reference     | index:true, null:false, foreign_key:true         |
+| user_id    | reference     | index:true, null:false, foreign_key:true         |
 
 
 
