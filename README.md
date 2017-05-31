@@ -27,6 +27,25 @@ belongs_to :group
 | email      | string        | implemented by devise Gem                        |
 | password   | string        | implemented by devise Gem                        |
 
+
 ### Association
 has_many :messages　　
 has_many :groups
+
+## groups table
+
+| Column     | Type          | Option                                           |
+|:-----------|:--------------|:------------------------------------------------:|
+| id         | integer       | primary_key                                      |
+| name       | string        | null:false, unique:true                          |
+
+
+### Association
+has_many :users
+has_many :messages　　
+
+
+
+
+
+
