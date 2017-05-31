@@ -13,7 +13,7 @@
 | created_at | datetime      | default                                          |
 
 ### Association
-belongs_to :user　　
+belongs_to :user  
 belongs_to :group
 
 
@@ -29,7 +29,7 @@ belongs_to :group
 
 
 ### Association
-has_many :messages　　
+has_many :messages  
 has_many :groups
 
 ## groups table
