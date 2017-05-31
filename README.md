@@ -57,7 +57,7 @@ has_many :group_users
 
 
 ### Association
-belongs_to :user
+belongs_to :user  
 belongs_to :group
 
 
