@@ -23,7 +23,6 @@ belongs_to :group
 |:-----------|:--------------|:------------------------------------------------------------:|
 | id         | integer       | primary_key                                                  |
 | name       | string        | index:true, null:false, unique:true                          |
-| group_id   | reference     | index:true, null:false, foreign_key:true                     |
 | email      | string        | implemented by devise Gem                                    |
 | password   | string        | implemented by devise Gem                                    |
 
