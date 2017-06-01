@@ -1,15 +1,16 @@
 %div.contents
   %div.notice
     チャットグループが作成されました。
-  %div.main.clearfix
-    %div.main__top.clearfix
-      %div.main__top__left
-        %div.main__top__left__group
-          Sampleグループ
-        %div.main__top__left__member
-          Member: ryo5
-      %div.main__top__right
-        Edit
+  %div.chat.clearfix
+    %div.chat__top.clearfix
+      %div.container
+        %div.chat__top__left
+          %div.chat__top__left__group
+            Sampleグループ
+          %div.chat__top__left__members
+            Member: ryo5
+        %div.chat__top__right
+          Edit
 
     %div.main__middle
       %div.main__middle__message.clearfix
@@ -36,8 +37,13 @@
       %div.main__middle__body
         なるほど
 
-    %div.main__bottom
-      あああ
+    %div.main__bottom.clearfix
+      %div.main__bottom__form-content
+        %form
+          %input{type:"text",placeholder:"type a messsage",style:"width:800px;height:50px;"}
+      %div.main__bottom__submit-btn
+        %p
+          Send
 
   %div.sidebar.clearfix
     %div.sidebar__top
