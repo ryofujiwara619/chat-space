@@ -60,6 +60,25 @@
     background: #e0e0e0;
     height:80px;
     padding:20px 40px;
+    &__form-content{
+        height:100px;
+        padding:20px 0 10px 20px;
+        margin:auto;
+        float:left;
+    }
+    &__submit-btn{
+        float:left;
+        background:#38aef0;
+        height:50px;
+        width:80px;
+        margin:20px 0 10px 10px;
+        p{
+          color:#fff;
+          line-height:50px;
+          text-align: center;
+        }
+        
+    }
   }
 }
 
