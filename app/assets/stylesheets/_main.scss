@@ -1,12 +1,12 @@
 .main{
-  width:75%;
+  width:1066px;
   float:right;
   &__top{
     padding:0 40px;
     border-bottom:1px solid black;
     &__left{
         float:left;
-        margin:35px 0 20px 0;
+        padding:35px 0 10px 0;
         &__group{
             font-size:20px;
             color:#333333;
@@ -63,19 +63,7 @@
   }
 }
 
-.sidebar{
-  width:25%;
-  float:left;
-  &__top{
-    background:#253141;
-    height:84px;
-    padding:35px 20px 0 20px;
-    color:#ffffff;
-    &__left{
-      font-size:16px;
-    }
-  }
-}
+
 
 .clearfix:after{
   content:"";
