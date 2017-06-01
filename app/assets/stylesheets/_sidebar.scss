@@ -8,8 +8,15 @@
     color:#ffffff;
     border-bottom:1px solid black;
     &__left{
+      float:left;
       font-size: 15px;
       font-weight: bold;
+    }
+    &__right{
+      float:right;
+      .fa{
+        color:#fff;
+      }
     }
   }
   &__bottom{
