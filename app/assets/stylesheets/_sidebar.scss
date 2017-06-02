@@ -2,6 +2,7 @@
 .sidebar{
   width:300px;
   float:left;
+  @include clearfix;
   &__top{
     background:#253141;
     height:63px;
