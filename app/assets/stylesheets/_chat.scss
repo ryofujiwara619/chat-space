@@ -29,7 +29,7 @@
   }
 
   &__middle{
-    height:420px;
+    height:370px;
     padding-top:46px;
     background:#f0f0f0;
     &__message{
@@ -58,10 +58,25 @@
   &__bottom{
     background: #e0e0e0;
     height:90px;
-    &__form-content{
+    &__form{
         padding:20px 0px;
         margin:auto;
         float:left;
+        &__message{
+          background: #fff;
+          width:850px;
+          height:50px;
+          &--left{
+            padding-left:10px;
+            float:left;
+            line-height:50px;
+          }
+          &--right{
+            float:right;
+            padding-right:10px;
+            line-height:50px;
+          }
+        }
     }
     &__submit-btn{
         float:right;
