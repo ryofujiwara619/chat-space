@@ -1,0 +1,48 @@
+%div.chat.clearfix
+  %div.chat__top.clearfix
+    %div.container
+      %div.chat__top__left
+        %div.chat__top__left__group
+          Sampleグループ
+        %div.chat__top__left__members
+          Member: ryo5
+      %div.chat__top__right
+        =link_to "Edit", "#",{style:"color:#38aef0;text-decoration:none"}
+
+  %div.chat__middle
+    %div.container
+      %div.chat__middle__message.clearfix
+        %div.chat__middle__message__member
+          ryo1
+        %div.chat__middle__message__datetime
+          2017/05/31 17:37:36
+      %div.chat__middle__body
+        なるほど
+    
+      %div.chat__middle__message.clearfix
+        %div.chat__middle__message__member
+          ryo1
+        %div.chat__middle__message__datetime
+          2017/05/31 17:37:36
+      %div.chat__middle__body
+        なるほど
+      
+      %div.chat__middle__message.clearfix
+        %div.chat__middle__message__member
+          ryo1
+        %div.chat__middle__message__datetime
+          2017/05/31 17:37:36
+      %div.chat__middle__body
+        なるほど
+
+  %div.chat__bottom.clearfix
+    %div.container
+      %div.chat__bottom__form
+        %div.chat__bottom__form__message.clearfix
+          %div.chat__bottom__form__message--left
+            Type a message
+          %div.chat__bottom__form__message--right
+            %i.fa.fa-image  
+      %div.chat__bottom__submit-btn
+        =link_to "Send", "#",{style:"color:#38aef0;text-decoration:none;color:#fff;line-height:50px"}
+        
