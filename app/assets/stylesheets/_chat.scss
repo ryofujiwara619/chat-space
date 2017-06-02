@@ -6,28 +6,31 @@
   &__top{
     border-bottom:1px solid #eeeeee;
     @include clearfix;
-    &__left{
+    &--left{
         float:left;
         margin-top:35px;
-        &__group{
+        &--group{
             font-size:20px;
             color:#333333;
             margin-bottom:15px;
             }
-        &__members{
+        &--members{
             font-size:12px;
             color:$light_color;
             margin-bottom:10px;
             }
        }
-    &__right{
+    &--right{
         height:40px;
         line-height:40px;
         float:right;
         border:2px solid $base_color;
         color:$base_color;
         margin-top:28px;
-        padding:0 20px;
+        .edit{
+          padding:0 20px;
+          text-decoration:none;
+        }
     }
   }
 
@@ -35,24 +38,24 @@
     height:374px;
     padding-top:46px;
     background:#f0f0f0;
-    &__message{
+    &--message{
       line-height: 20px;
       padding-bottom: 10px;
       @include clearfix;
-      &__member{
+      &--member{
           float:left;
           margin-right:10px;
           font-size:16px;
           font-weight:bold;
           color: $chat_color;
       }
-      &__datetime{
+      &--datetime{
           float:left;
           font-size:12px;
           color:$light_color;
       }
     }
-    &__body{
+    &--body{
         color:$chat_color;
         font-size: 14px;
         padding-bottom:40px;
@@ -63,11 +66,11 @@
     background: #e0e0e0;
     height:90px;
     @include clearfix;
-    &__form{
+    &--form{
         padding:20px 0px;
         margin:auto;
         float:left;
-        &__message{
+        &--message{
           background: $font_white;
           width:870px;
           height:50px;
@@ -86,7 +89,7 @@
           }
         }
     }
-    &__submit-btn{
+    &--submit-btn{
         float:right;
         background-color:$base_color;
         height:50px;

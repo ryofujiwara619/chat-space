@@ -1,47 +1,48 @@
-%div.chat
-  %div.chat__top
-    %div.container
-      %div.chat__top__left
-        %div.chat__top__left__group
+.chat
+  .chat__top
+    .container
+      .chat__top--left
+        .chat__top--left--group
           Sampleグループ
-        %div.chat__top__left__members
+        .chat__top--left--members
           Member: ryo5
-      %div.chat__top__right
-        =link_to "Edit", "#",{style:"color:#38aef0;text-decoration:none"}
+      .chat__top--right
+        =link_to "Edit" do
+          あああ
 
-  %div.chat__middle
-    %div.container
-      %div.chat__middle__message
-        %div.chat__middle__message__member
+  .chat__middle
+    .container
+      .chat__middle--message
+        .chat__middle--message--member
           ryo1
-        %div.chat__middle__message__datetime
+        .chat__middle--message--datetime
           2017/05/31 17:37:36
-      %div.chat__middle__body
+      .chat__middle--body
         なるほど
     
-      %div.chat__middle__message
-        %div.chat__middle__message__member
+      .chat__middle--message
+        .chat__middle--message--member
           ryo1
-        %div.chat__middle__message__datetime
+        .chat__middle--message--datetime
           2017/05/31 17:37:36
-      %div.chat__middle__body
+      .chat__middle--body
         なるほど
       
-      %div.chat__middle__message
-        %div.chat__middle__message__member
+      .chat__middle--message
+        .chat__middle--message--member
           ryo1
-        %div.chat__middle__message__datetime
+        .chat__middle--message--datetime
           2017/05/31 17:37:36
-      %div.chat__middle__body
+      .chat__middle--body
         なるほど
 
-  %div.chat__bottom
-    %div.container
-      %div.chat__bottom__form
-        %div.chat__bottom__form__message
-          %div.chat__bottom__form__message--left
+  .chat__bottom
+    .container
+      .chat__bottom--form
+        .chat__bottom--form--message
+          .chat__bottom--form--message--left
             Type a message
-          %div.chat__bottom__form__message--right
+          .chat__bottom--form--message--right
             %i.fa.fa-image  
-      %div.chat__bottom__submit-btn
+      .chat__bottom--submit-btn
         =link_to "Send", "#",{style:"color:#38aef0;text-decoration:none;color:#fff;line-height:50px"}

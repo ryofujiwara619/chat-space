@@ -8,12 +8,12 @@
     height:63px;
     padding:45px 20px 0 20px;
     color:$font-white;
-    &__left{
+    &--left{
       float:left;
       font-size: 15px;
       font-weight: bold;
-    }
-    &__right{
+   --
+    &--right{
       float:right;
       .fa{
         color:$font-white;
@@ -25,11 +25,11 @@
       background: #2f3151;
       padding:20px 20px 0 20px;
       color:$font-white;
-      &__group{
+      &--group{
           font-size:15px;
           padding-bottom:5px;
       }
-      &__message{
+      &--message{
           font-size:11px;
           padding-bottom: 40px;
       }
