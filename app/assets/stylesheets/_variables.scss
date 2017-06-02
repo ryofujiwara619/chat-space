@@ -1,0 +1,12 @@
+$base_color:#38aef0;
+$font_white:#fff;
+$chat_color:#434a54;
+$light_color:#999999;
+
+@mixin clearfix{
+  &:after{
+    content:"";
+    display:block;
+    clear:both;
+  }
+}

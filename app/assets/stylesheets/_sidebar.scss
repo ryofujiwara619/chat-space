@@ -1,0 +1,37 @@
+.sidebar{
+  width:300px;
+  float:left;
+  @include clearfix;
+  &__top{
+    background:#253141;
+    height:63px;
+    padding:45px 20px 0 20px;
+    color:$font-white;
+    &--left{
+      float:left;
+      font-size: 15px;
+      font-weight: bold;
+    }
+    &--right{
+      float:right;
+      .fa{
+        color:$font-white;
+        text-decoration: none;
+    }
+  }
+}
+  &__bottom{
+      height:537px;
+      background: #2f3151;
+      padding:20px 20px 0 20px;
+      color:$font-white;
+      &--group{
+          font-size:15px;
+          padding-bottom:5px;
+      }
+      &--message{
+          font-size:11px;
+          padding-bottom: 40px;
+        }
+      }
+}
