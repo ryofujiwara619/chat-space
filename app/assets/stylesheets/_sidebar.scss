@@ -12,16 +12,17 @@
       float:left;
       font-size: 15px;
       font-weight: bold;
-   --
+    }
     &--right{
       float:right;
       .fa{
         color:$font-white;
-      }
+        text-decoration: none;
     }
   }
+}
   &__bottom{
-      height:491px;
+      height:537px;
       background: #2f3151;
       padding:20px 20px 0 20px;
       color:$font-white;
@@ -32,6 +33,7 @@
       &--message{
           font-size:11px;
           padding-bottom: 40px;
+        }
       }
-  }
+    
 }

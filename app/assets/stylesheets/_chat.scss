@@ -27,15 +27,13 @@
         border:2px solid $base_color;
         color:$base_color;
         margin-top:28px;
-        .edit{
-          padding:0 20px;
-          text-decoration:none;
-        }
+        padding:0 20px;
+        text-decoration:none;
     }
   }
 
   &__middle{
-    height:374px;
+    height:420px;
     padding-top:46px;
     background:#f0f0f0;
     &--message{
@@ -96,6 +94,9 @@
         width:100px;
         margin:20px 0 10px 15px;
         text-align: center;
+        text-decoration:none;
+        color:#fff;
+        line-height:50px;
     }
   }
 }
