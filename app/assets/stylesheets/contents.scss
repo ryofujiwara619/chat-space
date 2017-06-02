@@ -1,13 +1,13 @@
+@import "./variables";
 .contents{
   width:100%;
-  
 }
 
 .notice{
-  background:#38aef0;
+  background:$base_color;
   height:30px;
   width:100%;
-  color:white;
+  color:$font-white;
   text-align: center;
   line-height:30px;
 }

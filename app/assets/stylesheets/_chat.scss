@@ -1,3 +1,5 @@
+@import "variables";
+
 .chat{
   float:left;
   &__top{
@@ -12,7 +14,7 @@
             }
         &__members{
             font-size:12px;
-            color:#999999;
+            color:$light_color;
             margin-bottom:10px;
             }
        }
@@ -20,8 +22,8 @@
         height:40px;
         line-height:40px;
         float:right;
-        border:2px solid #38aef0;
-        color:#38aef0;
+        border:2px solid $base_color;
+        color:$base_color;
         margin-top:28px;
         padding:0 20px;
     }
@@ -39,16 +41,16 @@
           margin-right:10px;
           font-size:16px;
           font-weight:bold;
-          color: #333333;
+          color: $chat_color;
       }
       &__datetime{
           float:left;
           font-size:12px;
-          color:#999999;
+          color:$light_color;
       }
     }
     &__body{
-        color:#434a54;
+        color:$chat_color;
         font-size: 14px;
         padding-bottom:40px;
       }
@@ -62,14 +64,14 @@
         margin:auto;
         float:left;
         &__message{
-          background: #fff;
+          background: $font_white;
           width:870px;
           height:50px;
           &--left{
             padding-left:10px;
             float:left;
             line-height:50px;
-            color:#434a54;
+            color:$chat_color;
             font-size: 16px;
           }
           &--right{
@@ -81,7 +83,7 @@
     }
     &__submit-btn{
         float:right;
-        background:#38aef0;
+        background-color:$base_color;
         height:50px;
         width:100px;
         margin:20px 0 10px 15px;

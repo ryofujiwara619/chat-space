@@ -1,3 +1,4 @@
+@import "./variables";
 .sidebar{
   width:300px;
   float:left;
@@ -5,7 +6,7 @@
     background:#253141;
     height:63px;
     padding:45px 20px 0 20px;
-    color:#ffffff;
+    color:$font-white;
     &__left{
       float:left;
       font-size: 15px;
@@ -14,7 +15,7 @@
     &__right{
       float:right;
       .fa{
-        color:#fff;
+        color:$font-white;
       }
     }
   }
@@ -22,7 +23,7 @@
       height:491px;
       background: #2f3151;
       padding:20px 20px 0 20px;
-      color:#ffffff;
+      color:$font-white;
       &__group{
           font-size:15px;
           padding-bottom:5px;
