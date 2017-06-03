@@ -1,16 +1,15 @@
 class UsersController < ApplicationController
 before_action :set_user
+before_action :authenticate_user!
 
   def edit
   end
 
   def update
-    if current_user.id == @user.id
-       if @user.update(user_params)
-          redirect_to root_path
-       else
-          redirect_to edit_user_registration_path
-       end
+    if @user.update(user_params)
+       redirect_to root_path
+    else
+       render 'edit'
     end
   end
 
