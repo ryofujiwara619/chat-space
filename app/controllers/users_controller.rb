@@ -1,12 +1,12 @@
 class UsersController < ApplicationController
+before_action :set_params
+
   def edit
-    @user = User.find(params[:id])
   end
 
   def update
-    user = User.find(params[:id])
-    if current_user.id == user.id
-      user.update(user_params)
+    if current_user.id == @user.id
+      @user.update(user_params)
       redirect_to root_path
     end
   end
@@ -14,5 +14,9 @@ class UsersController < ApplicationController
   private
   def user_params
     params.require(:user).permit(:name,:email)
+  end
+
+  def set_params
+    @user = User.find(params[:id])
   end
 end
