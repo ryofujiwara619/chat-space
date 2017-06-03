@@ -6,9 +6,11 @@ before_action :set_user
 
   def update
     if current_user.id == @user.id
-      if @user.update(user_params)
+       if @user.update(user_params)
           redirect_to root_path
-      else
+       else
+          redirect_to edit_user_registration_path
+       end
     end
   end
 
