@@ -1,8 +1,13 @@
 .flash{
-  background:$base_color;
   height:30px;
   width:100%;
-  color:$font-white;
   text-align: center;
   line-height:30px;
+  color:$font-white;
+  &__notice{
+      background:$base_color;
+  }
+  &__alert{
+      background: red;
+  }
 }
