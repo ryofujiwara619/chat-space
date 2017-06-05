@@ -8,9 +8,9 @@ before_action :authenticate_user!
   def update
     if @user.update(user_params)
        redirect_to root_path
-       flash[:notice]="アカウント情報を変更しました"
+       flash[:notice] = "アカウント情報を変更しました"
     else
-       flash[:alert]="アカウント更新に失敗しました。"
+       flash[:alert] = "アカウント更新に失敗しました。"
        render 'edit'
     end
   end
