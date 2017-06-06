@@ -1,0 +1,14 @@
+.sidebar__bottom
+  - @groups.each do |group|
+    .sidebar__bottom--group
+      = link_to "あ",group_messages_path(group.id) 
+    .sidebar__bottom--message
+      ううう
+    .sidebar__bottom--group
+      = link_to "あ",group_messages_path(group.id) 
+    .sidebar__bottom--message
+      ううう
+    .sidebar__bottom--group
+      = link_to "あ",group_messages_path(group.id)
+    .sidebar__bottom--message
+      ううう
