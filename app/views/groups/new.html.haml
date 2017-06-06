@@ -1,0 +1,8 @@
+.chat-group-form
+  %h1 新規チャットグループ
+  %form#new_chat_group.new_chat_group{"accept-charset" => "UTF-8", :action => "/chat_groups", :method => "post"}
+    = render "groups/form"
+    .chat-group-form__field.clearfix
+      .chat-group-form__field--left
+      .chat-group-form__field--right
+        %input.chat-group-form__action-btn{"data-disable-with" => "Save", :name => "commit", :type => "submit", :value => "登録する"}/
