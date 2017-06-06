@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   root "messages#index"
   resources :users,only:[:edit,:update]
   resources :groups,except:[:destroy] do
-    resources :messages,only:[:index.:create]
+    resources :messages,only:[:index,:create]
   end
 end
