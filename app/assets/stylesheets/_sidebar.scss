@@ -24,14 +24,18 @@
       height:537px;
       background: #2f3151;
       padding:20px 20px 0 20px;
-      color:$font-white;
       &--group{
           font-size:15px;
           padding-bottom:5px;
+          &--link{
+            text-decoration: none;
+            color:$font-white;
+          }
       }
       &--message{
           font-size:11px;
           padding-bottom: 40px;
+          color:$font-white;
         }
       }
 }
