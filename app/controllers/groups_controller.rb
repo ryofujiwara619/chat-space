@@ -1,6 +1,7 @@
 class GroupsController < ApplicationController
   def index
     @groups = Group.all
+    @group = Group.find(params[:id]) if params[:id]
   end
 
   def show
