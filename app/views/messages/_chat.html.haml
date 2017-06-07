@@ -1,46 +1,47 @@
-.chat
-  .chat__top
-    .container
-      .chat__top--left
-        .chat__top--left--group
-          Sampleグループ
-        .chat__top--left--members
-          Member: ryo5
-      = link_to "Edit",edit_group_path(current_user), class:"chat__top--right"
+- if @group
+  .chat
+    .chat__top
+      .container
+        .chat__top--left
+          .chat__top--left--group
+            = @group.name
+          .chat__top--left--members
+            Member: ryo5
+        = link_to "Edit",edit_group_path(@group.id), class:"chat__top--right"
 
-  .chat__middle
-    .container
-      .chat__middle--message
-        .chat__middle--message--member
-          ryo1
-        .chat__middle--message--datetime
-          2017/05/31 17:37:36
-      .chat__middle--body
-        なるほど
-    
-      .chat__middle--message
-        .chat__middle--message--member
-          ryo1
-        .chat__middle--message--datetime
-          2017/05/31 17:37:36
-      .chat__middle--body
-        なるほど
+    .chat__middle
+      .container
+        .chat__middle--message
+          .chat__middle--message--member
+            ryo1
+          .chat__middle--message--datetime
+            2017/05/31 17:37:36
+        .chat__middle--body
+          なるほど
       
-      .chat__middle--message
-        .chat__middle--message--member
-          ryo1
-        .chat__middle--message--datetime
-          2017/05/31 17:37:36
-      .chat__middle--body
-        なるほど
+        .chat__middle--message
+          .chat__middle--message--member
+            ryo1
+          .chat__middle--message--datetime
+            2017/05/31 17:37:36
+        .chat__middle--body
+          なるほど
+        
+        .chat__middle--message
+          .chat__middle--message--member
+            ryo1
+          .chat__middle--message--datetime
+            2017/05/31 17:37:36
+        .chat__middle--body
+          なるほど
 
-  .chat__bottom
-    .container
-      .chat__bottom--form
-        .chat__bottom--form--message
-          .chat__bottom--form--message--left
-            Type a message
-          .chat__bottom--form--message--right
-            %i.fa.fa-image  
-      .chat__bottom--submit-btn
-        Send
+    .chat__bottom
+      .container
+        .chat__bottom--form
+          .chat__bottom--form--message
+            .chat__bottom--form--message--left
+              Type a message
+            .chat__bottom--form--message--right
+              %i.fa.fa-image  
+        .chat__bottom--submit-btn
+          Send
