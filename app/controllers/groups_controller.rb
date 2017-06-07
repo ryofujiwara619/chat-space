@@ -18,6 +18,7 @@ class GroupsController < ApplicationController
       flash[:notice] = "グループを作成しました"
       redirect_to root_path
     else
+      flash[:alert] = "グループを作成に失敗しました"
       render :new
     end
   end
