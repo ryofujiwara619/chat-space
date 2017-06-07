@@ -1,11 +1,10 @@
 class GroupsController < ApplicationController
+before_action :set_group,only:[:show,:edit,:update]
   def index
     @groups = Group.all
-    @group = Group.find(params[:id]) if params[:id]
   end
 
   def show
-    @group = Group.find(params[:id])
   end
 
   def new
@@ -24,11 +23,9 @@ class GroupsController < ApplicationController
   end
 
   def edit
-    @group = Group.find(params[:id])
   end
 
   def update
-    @group = Group.find(params[:id])
     if @group.update(group_params)
       flash[:notice] = "グループを更新しました"
       redirect_to root_path
@@ -41,5 +38,9 @@ class GroupsController < ApplicationController
   private
   def group_params
     params.require(:group).permit(:name)
+  end
+
+  def set_group
+    @group = Group.find(params[:id])
   end
 end
