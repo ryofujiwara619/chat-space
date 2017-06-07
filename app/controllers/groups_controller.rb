@@ -9,10 +9,18 @@ class GroupsController < ApplicationController
   end
 
   def new
-    @group=Group.new
+    @group = Group.new
   end
 
   def create
+    @group = Group.new(group_params)
+    if @group.save
+      flash[:notice] = "グループを作成しました"
+      redirect_to root_path
+    else
+      flash[:alert] = "グループを作成に失敗しました"
+      render :new
+    end
   end
 
   def edit
@@ -20,5 +28,10 @@ class GroupsController < ApplicationController
   end
 
   def update
+  end
+
+  private
+  def group_params
+    params.require(:group).permit(:name)
   end
 end

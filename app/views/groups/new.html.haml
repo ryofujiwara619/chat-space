@@ -1,4 +1,4 @@
 .chat-group-form
   %h1 新規チャットグループ
-  %form#new_chat_group.new_chat_group{ "accept-charset" => "UTF-8", :action => "/chat_groups", :method => "post" }
+  = form_for(@group) do |f|
     = render "groups/form"
