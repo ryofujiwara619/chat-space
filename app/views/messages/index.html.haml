@@ -1,3 +1,59 @@
-.contents
-  = render "messages/sidebar"
-  = render "messages/chat"
+.sidebar
+  .sidebar__top
+    .sidebar__top--left
+      ryo5
+    .sidebar__top--right
+      =link_to new_group_path do
+        .i.fa.fa-edit
+      =link_to edit_user_registration_path do
+        .i.fa.fa-cog
+  .sidebar__bottom
+    - @groups.each do |group|
+      .sidebar__bottom--group
+        = link_to group.name, group_messages_path(group.id), class: "sidebar__bottom--group--link"
+      .sidebar__bottom--message
+        まだメッセージはありません。
+
+.chat
+  .chat__top
+    .container
+      .chat__top--left
+        .chat__top--left--group
+          = @group.name
+        .chat__top--left--members
+          Member: ryo5
+      = link_to "Edit",edit_group_path(@group.id), class:"chat__top--right"
+
+  .chat__middle
+    .container
+      .chat__middle--message
+        .chat__middle--message--member
+          ryo1
+        .chat__middle--message--datetime
+          2017/05/31 17:37:36
+      .chat__middle--body
+        なるほど
+
+      .chat__middle--message
+        .chat__middle--message--member
+          ryo1
+        .chat__middle--message--datetime
+          2017/05/31 17:37:36
+      .chat__middle--body
+        なるほど
+
+      .chat__middle--message
+        .chat__middle--message--member
+          ryo1
+        .chat__middle--message--datetime
+          2017/05/31 17:37:36
+      .chat__middle--body
+        なるほど
+
+  .chat__bottom
+    .container
+      =form_for [@group,@message] do |f|
+        = f.text_field :body,placeholder:"type a message",class:"chat__bottom--message"
+        = f.label :image,class:"chat__bottom--message--icon fa fa-image" do
+          = f.file_field :image,style:"display:none"
+        = f.submit "Send",class:"chat__bottom--submit"
