@@ -1,5 +1,5 @@
 class MessagesController < ApplicationController
-before_action :group_params,only:[:index,:create]
+before_action :group_params,only: [:index,:create]
 
   def index
     @message = Message.new
@@ -8,7 +8,7 @@ before_action :group_params,only:[:index,:create]
   def create
     @message = Message.new(message_params)
     if @message.save
-      redirect_to group_messages_path,notice: "メッセージを送信しました"
+      redirect_to group_messages_path, notice: "メッセージを送信しました"
     else
       flash[:alert] = "メッセージ送信に失敗しました。"
       render "messages/index"
@@ -17,7 +17,7 @@ before_action :group_params,only:[:index,:create]
 
   private
   def message_params
-    params.require(:message).permit(:body, :image).merge(user_id: current_user.id,group_id: params[:group_id])
+    params.require(:message).permit(:body, :image).merge(user_id: current_user.id, group_id: params[:group_id])
   end
 
   def group_params
