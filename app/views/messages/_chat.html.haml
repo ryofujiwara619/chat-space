@@ -7,7 +7,7 @@
             = @group.name
           .chat__top--left--members
             Member: ryo5
-        = link_to "Edit",edit_group_path(@group.id), class:"chat__top--right"
+        = link_to "Edit", edit_group_path(@group.id), class:"chat__top--right"
 
     .chat__middle
       .container
@@ -18,7 +18,7 @@
             2017/05/31 17:37:36
         .chat__middle--body
           なるほど
-      
+
         .chat__middle--message
           .chat__middle--message--member
             ryo1
@@ -26,7 +26,7 @@
             2017/05/31 17:37:36
         .chat__middle--body
           なるほど
-        
+
         .chat__middle--message
           .chat__middle--message--member
             ryo1
@@ -37,11 +37,8 @@
 
     .chat__bottom
       .container
-        .chat__bottom--form
-          .chat__bottom--form--message
-            .chat__bottom--form--message--left
-              Type a message
-            .chat__bottom--form--message--right
-              %i.fa.fa-image  
-        .chat__bottom--submit-btn
-          Send
+        =form_for [@group,@message] do |f|
+          = f.text_field :body,placeholder: "type a message", class:"chat__bottom--message"
+          = f.label :image, class:"chat__bottom--message--icon fa fa-image" do
+            = f.file_field :image, style: "display:none"
+          = f.submit "Send", class: "chat__bottom--submit"
