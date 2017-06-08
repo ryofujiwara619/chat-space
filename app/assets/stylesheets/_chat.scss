@@ -1,5 +1,6 @@
 .chat{
   float:left;
+  width:1065px;
   @include clearfix;
   &__top{
     border-bottom:1px solid #eeeeee;
@@ -58,45 +59,34 @@
       }
   }
 
-  &__bottom{
-    background: #e0e0e0;
-    height:90px;
-    @include clearfix;
-    &--form{
-        padding:20px 0px;
-        margin:auto;
-        float:left;
+     &__bottom{
+        background: #e0e0e0;
+        height:90px;
         &--message{
+          width:800px;
           background: $font_white;
-          width:870px;
+          margin-left:10px;
+          margin-top:20px;
           height:50px;
-          @include clearfix;
-          &--left{
-            padding-left:10px;
-            float:left;
-            line-height:50px;
-            color:$chat_color;
-            font-size: 16px;
-          }
-          &--right{
-            float:right;
-            padding-right:10px;
-            line-height:50px;
-          }
+          padding-left:10px;
+          &--icon{
+          line-height:90px;
+          font-size:16px;
+          margin:40px 0px;
+          cursor:pointer;
         }
-    }
-    &--submit-btn{
-        float:right;
-        background-color:$base_color;
-        height:50px;
-        width:100px;
-        margin:20px 0 10px 15px;
-        text-align: center;
-        text-decoration:none;
-        color:#fff;
-        line-height:50px;
-    }
-  }
+        }
+        &--submit{
+          background: $base_color;
+          height:50px;
+          width:100px;
+          margin:20px 0 0 15px;
+          text-align:center;
+          text-decoration: none;
+          color:$font_white;
+          border:none;
+        }
+     }
 }
 
 .container{
