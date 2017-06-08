@@ -6,34 +6,21 @@
           .chat__top--left--group
             = @group.name
           .chat__top--left--members
-            Member: ryo5
+            - @group.users.each do |user|
+              = user.name
         = link_to "Edit", edit_group_path(@group.id), class:"chat__top--right"
 
     .chat__middle
       .container
-        .chat__middle--message
-          .chat__middle--message--member
-            ryo1
-          .chat__middle--message--datetime
-            2017/05/31 17:37:36
-        .chat__middle--body
-          なるほど
+        - @group.messages.each do |message|
+          .chat__middle--message
+            .chat__middle--message--member
+              = message.user.name
+            .chat__middle--message--datetime
+              = message.created_at
+          .chat__middle--body
+            = message.body
 
-        .chat__middle--message
-          .chat__middle--message--member
-            ryo1
-          .chat__middle--message--datetime
-            2017/05/31 17:37:36
-        .chat__middle--body
-          なるほど
-
-        .chat__middle--message
-          .chat__middle--message--member
-            ryo1
-          .chat__middle--message--datetime
-            2017/05/31 17:37:36
-        .chat__middle--body
-          なるほど
 
     .chat__bottom
       .container
