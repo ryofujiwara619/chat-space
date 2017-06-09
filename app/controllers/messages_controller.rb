@@ -3,7 +3,6 @@ before_action :set_instance_variables,only: [:index,:create]
 
   def index
     @message = Message.new
-    @messages = Message.includes(:groups,:users)
   end
 
   def create
@@ -22,7 +21,7 @@ before_action :set_instance_variables,only: [:index,:create]
   end
 
   def set_instance_variables
-    @groups = Group.includes(:users,:messages)
+    @groups = current_user.groups
     @group = Group.find(params[:group_id])
   end
 
