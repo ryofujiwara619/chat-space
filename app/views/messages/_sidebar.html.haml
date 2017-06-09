@@ -1,7 +1,7 @@
 .sidebar
   .sidebar__top
     .sidebar__top--left
-      ryo5
+      = current_user.name
     .sidebar__top--right
       =link_to new_group_path do
         .i.fa.fa-edit
@@ -12,4 +12,9 @@
       .sidebar__bottom--group
         = link_to group.name, group_messages_path(group.id), class: "sidebar__bottom--group--link"
       .sidebar__bottom--message
-        まだメッセージはありません。
+        - if group.messages.empty?
+          まだメッセージはありません。
+        - elsif group.messages.last.image.present?
+          画像が投稿されています。
+        - else
+          = group.messages.last.body

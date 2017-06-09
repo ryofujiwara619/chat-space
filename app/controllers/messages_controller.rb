@@ -21,7 +21,7 @@ before_action :set_instance_variables,only: [:index,:create]
   end
 
   def set_instance_variables
-    @groups = Group.all
+    @groups = current_user.groups
     @group = Group.find(params[:group_id])
   end
 
