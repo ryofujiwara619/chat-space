@@ -20,6 +20,8 @@
               = message.created_at.strftime("%Y/%m/%d %H:%M")
           .chat__middle--body
             = message.body
+            - if message.image
+              = image_tag message.image.to_s
 
 
     .chat__bottom
