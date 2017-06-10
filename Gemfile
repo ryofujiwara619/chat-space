@@ -36,6 +36,13 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'pry-rails'
+  gem 'haml-rails'
+  gem 'erb2haml'
+  gem 'font-awesome-rails'
+  gem 'devise'
+  gem 'carrierwave'
+  gem 'rspec-rails'
+  gem 'factory_girl_rails', "~> 4.4.1"
 end
 
 group :development do
@@ -46,10 +53,4 @@ group :development do
   gem 'spring'
 end
 
-gem 'haml-rails'
-gem 'erb2haml'
-gem 'font-awesome-rails'
 
-gem 'devise'
-
-gem 'carrierwave'
