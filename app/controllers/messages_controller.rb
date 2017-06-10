@@ -10,7 +10,7 @@ before_action :set_instance_variables,only: [:index,:create]
     if @message.save
       redirect_to group_messages_path, notice: "メッセージを送信しました"
     else
-      flash[:alert] = "メッセージ送信に失敗しました。"
+      flash.now[:alert] = "メッセージ送信に失敗しました。"
       render "index"
     end
   end

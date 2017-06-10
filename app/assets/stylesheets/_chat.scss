@@ -32,7 +32,7 @@
   }
 
   &__middle{
-    height: 420px;
+    height: 450px;
     padding-top: 46px;
     background: #f0f0f0;
     overflow: scroll;
@@ -63,20 +63,28 @@
      &__bottom{
         background: #e0e0e0;
         height: 90px;
+        position:relative;
+        float:left;
+        @include clearfix;
+        width: 1065px;
         &--message{
-          width: 820px;
+          width: 840px;
           background: $font_white;
           margin-left: 10px;
           margin-top: 20px;
           height: 50px;
           padding-left: 10px;
-          &--icon{
-          line-height: 90px;
-          font-size: 16px;
-          margin: 40px 0px;
-          cursor: pointer;
+          float:left;
         }
-        }
+        .fa{
+        line-height: 90px;
+        font-size: 16px;
+        margin: 40px 0px;
+        margin: 0 auto;
+        cursor: pointer;
+        position:absolute;
+        left:870px;
+      }
         &--submit{
           background: $base_color;
           height: 50px;
