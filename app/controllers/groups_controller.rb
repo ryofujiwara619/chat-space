@@ -2,8 +2,8 @@ class GroupsController < ApplicationController
 before_action :set_group,only:[:show,:edit,:update]
 
   def index
-    @groups = current_user.groups
-    @group = Group.find(params[:group_id]) if (params[:group_id])
+      @groups = current_user.groups
+      @group = Group.find(params[:group_id]) if params[:group_id]
   end
 
   def show

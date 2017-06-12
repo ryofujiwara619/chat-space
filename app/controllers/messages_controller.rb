@@ -6,11 +6,11 @@ before_action :set_instance_variables,only: [:index,:create]
   end
 
   def create
-    @group.messages.new(message_params)
-    if @group.save
+    @message = Message.new(message_params)
+    if @message.save
       redirect_to group_messages_path, notice: "メッセージを送信しました"
     else
-      flash[:alert] = "メッセージ送信に失敗しました。"
+      flash.now[:alert] = "メッセージ送信に失敗しました。"
       render "index"
     end
   end
@@ -21,8 +21,8 @@ before_action :set_instance_variables,only: [:index,:create]
   end
 
   def set_instance_variables
-    @groups = current_user.groups
-    @group = Group.find(params[:group_id])
+      @groups = current_user.groups
+      @group = Group.find(params[:group_id])
   end
 
 end
