@@ -1,5 +1,6 @@
 class MessagesController < ApplicationController
 before_action :set_instance_variables,only: [:index,:create]
+before_action :authenticate_user!
 
   def index
     @message = Message.new
@@ -21,12 +22,8 @@ before_action :set_instance_variables,only: [:index,:create]
   end
 
   def set_instance_variables
-    if user_signed_in?
       @groups = current_user.groups
       @group = Group.find(params[:group_id])
-    else
-      redirect_to new_user_session_path
-    end
   end
 
 end

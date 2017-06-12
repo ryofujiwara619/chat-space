@@ -1,13 +1,10 @@
 class GroupsController < ApplicationController
 before_action :set_group,only:[:show,:edit,:update]
+before_action :authenticate_user!
 
   def index
-    if user_signed_in?
       @groups = current_user.groups
       @group = Group.find(params[:group_id]) if params[:group_id]
-    else
-      redirect_to new_user_session_path
-    end
   end
 
   def show
