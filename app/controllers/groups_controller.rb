@@ -1,6 +1,5 @@
 class GroupsController < ApplicationController
 before_action :set_group,only:[:show,:edit,:update]
-before_action :authenticate_user!
 
   def index
       @groups = current_user.groups
