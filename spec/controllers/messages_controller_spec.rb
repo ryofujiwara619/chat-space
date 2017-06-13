@@ -15,7 +15,6 @@ describe MessagesController, type: :controller do
         login_user user
       end
 
-      let(:message){Message.new(group_id: group.id, user_id: user.id)}
       before :each do
         get :index, params: { group_id: group }
       end
@@ -54,8 +53,9 @@ describe MessagesController, type: :controller do
   # createのテスト
   describe "POST #create" do
 
-    # ユーザーログイン時
-    context "when user sign_in" do
+      # ユーザーログイン時
+      context "when user sign_in" do
+
       before do
       login_user user
       end
@@ -106,4 +106,3 @@ describe MessagesController, type: :controller do
     end
   end
 end
-
