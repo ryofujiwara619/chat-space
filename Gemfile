@@ -44,6 +44,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails', "~> 4.4.1"
   gem 'mini_magick'
+  gem 'rails-controller-testing'
 end
 
 group :development do
