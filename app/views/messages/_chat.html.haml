@@ -13,20 +13,25 @@
     .chat__middle
       .container
         - @group.messages.each do |message|
-          .chat__middle--message
-            .chat__middle--message--member
-              = message.user.name
-            .chat__middle--message--datetime
-              = message.created_at.strftime("%Y/%m/%d %H:%M")
-          .chat__middle--body
-            = message.body
-            = image_tag message.image.to_s
+          .chat__middle--post
+            .chat__middle--message
+              .chat__middle--message--member
+                = message.user.name
 
+              .chat__middle--message--datetime
+                = message.created_at.strftime("%Y/%m/%d %H:%M")
+
+            .chat__middle--contents
+              .chat__middle--contents--body
+                = message.body
+              %br/
+              .chat__middle--contents--image
+                = image_tag message.image.to_s
 
     .chat__bottom
       .container
         =form_for [@group,@message], html: { class: "chat-form" } do |f|
-          = f.text_field :body,placeholder: "type a message", class:"chat__bottom--message"
+          = f.text_field :body,placeholder: "type a message", class: "chat__bottom--message"
           = f.label :image, class:"fa fa-image" do
             = f.file_field :image, style: "display:none"
           = f.submit "Send", class: "chat__bottom--submit"
