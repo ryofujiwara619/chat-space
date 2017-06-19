@@ -1,9 +1,12 @@
 class UsersController < ApplicationController
-before_action :set_user
+before_action :set_user, only:[:update]
 before_action :authenticate_user!
 
-  def edit
+  def index
+    @user = User.find_user(params[:keyword])
+    render json: @user
   end
+
 
   def update
     if @user.update(user_params)
