@@ -3,7 +3,7 @@ before_action :set_user, only:[:update]
 before_action :authenticate_user!
 
   def index
-    @user = User.where("name LIKE(?)", "%#{params[:keyword]}%")
+    @user = User.find_user(params[:keyword])
       render json: @user
   end
 
