@@ -4,7 +4,7 @@ before_action :authenticate_user!
 
   def index
     @user = User.find_user(params[:keyword])
-      render json: @user
+    render json: @user
   end
 
 
