@@ -1,7 +1,6 @@
 $(function(){
 
-function cerateHtml(data){
-
+function addMember(data){
     var user_name = '<p class="chat-group-user__name">' + data.name + '</p>'
     var add_link  = '<a class="user-search-add chat-group-user__btn chat-group-user__btn--add" data-user-id="' + data.id +'" data-user-name="' +               data.name +'">追加</a>'
 
@@ -11,12 +10,12 @@ function cerateHtml(data){
 
 }
 
-function buildHtml(user_name, user_id){
+function deleteMember(user_name, user_id){
    var input = "<input name='group[user_ids][]' type='hidden' value='"+ user_id + "'>"
    var name = '<p class="chat-group-user__name">' + user_name + '</p>'
    var link  = '<a class="user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn">削除</a>'
 
-   var html = '<div class="chat-group-user clearfix">' + input + name + link + '</div>'
+   var html = '<li>' + '<div class="chat-group-user clearfix">' + input + name + link + '</div>' + '</li>'
 
     return html;
   }
@@ -38,10 +37,9 @@ function buildHtml(user_name, user_id){
 
     // 成功時
     .done(function(data){
-
       $(data).each(function(i, user){
-        var html = cerateHtml(user);
-        $("#user-search-result").append("<li>" + html + "</li>");
+        var html = addMember(user);
+        $("#user-search-result").append(html);
       });
     })
 
@@ -49,7 +47,7 @@ function buildHtml(user_name, user_id){
     .fail(function(){
       alert("失敗しました")
     })
-    $('#user-search-result').find('li').remove();// 一度出たliをリムーブ
+    $('#user-search-result').children().remove();// 一度出たliをリムーブ
   }); //keyup終了
 
 // 追加ボタンをクリック
@@ -62,7 +60,7 @@ function buildHtml(user_name, user_id){
     // ボタンを押された要素をチャットメンバーに追加
     var name = $(this).attr("data-user-name");
     var id = $(this).attr("data-user-id");
-    var html = buildHtml(name, id);
+    var html = deleteMember(name, id);
     $("#chat-group-users").append(html);
 
   });
