@@ -106,9 +106,9 @@ $(function(){
       var insertHTML = '';
       data.messages.forEach(function(message) {
         insertHTML += buildHTML(message);
-        $(".chat__middle").html(insertHTML);
-        scrollMethod();
       });
+      $(".chat__middle").html(insertHTML);
+        scrollMethod();
     })
     .fail(function(data) {
       alert("非同期に失敗しました。")
